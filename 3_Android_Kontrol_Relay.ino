@@ -8,15 +8,15 @@
 char AndroidLampu;                    // Variabel dengan nama AndroidLampu
 void setup() {
   pinMode(2,OUTPUT);                  // Mode pada Pin Digital 2 difungsian sebagai Output
-  pinMode(3,OUTPUT);                  // Mode pada Pin Digital 2 difungsian sebagai Output
-  pinMode(4,OUTPUT);                  // Mode pada Pin Digital 2 difungsian sebagai Output
-  pinMode(5,OUTPUT);                  // Mode pada Pin Digital 2 difungsian sebagai Output
+  pinMode(3,OUTPUT);                  // Mode pada Pin Digital 3 difungsian sebagai Output
+  pinMode(4,OUTPUT);                  // Mode pada Pin Digital 4 difungsian sebagai Output
+  pinMode(5,OUTPUT);                  // Mode pada Pin Digital 5 difungsian sebagai Output
   Serial.begin(9600);                 // Baudrate sebagai komunikasi antar modul arduino dengan laptop
 }
 
 void loop() {
 if( Serial.available() >0 ) {
-    AndroidLampu = Serial.read();     // Membaca Input dari variabel AndroidLampu
+    AndroidLampu = Serial.read();     // Membaca Input dari variabel Android Lampu
     Serial.println(AndroidLampu);     // Menampilkan Hasil AndroidLampu  pada Serial Monitor
 }
   if( AndroidLampu == '1' ) {         // Jika Variabel AndroidLampu di tekan 1 atau bernilai 1    
@@ -48,3 +48,7 @@ if( Serial.available() >0 ) {
     digitalWrite(5,HIGH);             // Memerintahkan relay dengan Kondisi HIGH/NYALA pada Pin Digital 5
   }
 } 
+//**********************************************************************************************************************
+//*****************************************=========Download Aplikasi=========******************************************
+//***************https://play.google.com/store/apps/details?id=appinventor.ai_alrilla_com.Kontrol_Android***************
+//**********************************************************************************************************************
